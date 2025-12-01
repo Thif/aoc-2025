@@ -1,0 +1,19 @@
+# Advent of code 2024
+
+### Getting started
+
+This repo is using uv to set up a virtual environment 
+
+```
+pip install uv
+uv sync
+```
+
+### Run code for a given day ( on test data )
+
+make sure the data is located in the input folder, for day 2
+To run the code on actual input, it should be pasted and the path specified instead of the test folder path
+
+```
+uv run python -m run_code day_2 ./test_inputs
+```

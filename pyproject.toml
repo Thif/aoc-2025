@@ -1,0 +1,19 @@
+[project]
+name = "aoc-2025"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "gymnasium>=1.2.2",
+    "pandas>=2.3.3",
+    "prospector>=1.17.3",
+]
+
+[tool.ruff]
+# Ruff configuration: fast linter/formatter. Adjust rules as needed.
+line-length = 88
+target-version = "py313"
+exclude = ["__pycache__", ".venv", "venv"]
+# You can add/adjust ignore/select lists below. These are conservative defaults.
+ignore = ["E203", "W503"]
