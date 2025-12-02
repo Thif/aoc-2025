@@ -12,7 +12,7 @@ def parse_input(input_data: str):
     return [item for sublist in m for item in sublist]
 
 
-def check_simetry(a: str) -> bool:
+def check_symetry(a: str) -> bool:
     if len(a) % 2 == 1:
         return False
     if a[0] == "0":
@@ -30,7 +30,6 @@ def check_repeated_pattern(a: str) -> bool:
 
         for r in range(1, len(a) // len(block) + 1):
             if block * r == a:
-                print("detected", a, block, r)
                 return True
 
     return False
@@ -44,7 +43,7 @@ def p1(m) -> int:
         start = int(pair.split("-")[0])
         end = int(pair.split("-")[1])
         for i in range(int(start), int(end) + 1):
-            if check_simetry(str(i)):
+            if check_symetry(str(i)):
                 count.append(i)
 
     return sum(count)
