@@ -66,12 +66,7 @@ def p2(m1, m2) -> int:
 
     new_fresh += [to_be_added]
 
-    count = 0
-
-    for v in new_fresh:
-        count += v[1] - v[0] + 1
-
-    return count
+    return sum([v[1] - v[0] + 1 for v in new_fresh])
 
 
 def main(input_data):
