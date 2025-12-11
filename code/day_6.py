@@ -30,8 +30,6 @@ def parse_input(input_data: str, prob=1):
 
 def p1(m) -> int:
 
-    count = 0
-
     mt = m.T
     values = mt[:, : mt.shape[1] - 1]
     signs = mt[:, mt.shape[1] - 1]
@@ -46,8 +44,6 @@ def p1(m) -> int:
                 tot += int(vi)
 
         grand_tot += tot
-
-    # for e in mt:
 
     return grand_tot
 
@@ -100,10 +96,5 @@ def p2(m) -> int:
 def main(input_data):
 
     m = parse_input(input_data, 1)
-    # print(m)
-    p1_result = p1(m.copy())
-    m = parse_input(input_data, 2)
 
-    p2_result = p2(m.copy())
-
-    return p1_result, p2_result
+    return p1(m.copy()), p2(m.copy())
